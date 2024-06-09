@@ -1,12 +1,20 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import SidebarComp from "./components/dashboard/Sidebar"
+
+"use client"
+
+import SidebarComp from "./components/sidebar/Sidebar"
+import { CustomProvider } from "rsuite";
 import "rsuite/dist/rsuite.min.css";
+import { useState } from "react";
+
 
 export default function Home() {
+  const [useDarkMode, setUseDarkMode] = useState<boolean>(false);
+
     return (
-      <div className="poppins flex w-full h-screen">
-        <SidebarComp/>
-      </div>
+      <CustomProvider theme={(useDarkMode ? "dark" : "light")}>
+        <div className="poppins flex w-full h-screen">
+          <SidebarComp darkMode={useDarkMode} setDarkMode={setUseDarkMode}/>
+        </div>
+      </CustomProvider>
     );
 }
