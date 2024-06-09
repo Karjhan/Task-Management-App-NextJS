@@ -1,0 +1,27 @@
+@media (prefers-color-scheme: dark){
+  :root{
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.poppins{
+  font-family: var(--font-poppins);
+}
+
+.poppins-regular{
+  font-weight: 400;
+}
+
+.poppins-light{
+  font-weight: 300;
+}
+
+.poppins-thin{
+  font-weight: 100;
+}
+
+.poppins-semibold{
+  font-weight: 600;
+}
