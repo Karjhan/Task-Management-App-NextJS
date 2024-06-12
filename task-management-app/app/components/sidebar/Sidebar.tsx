@@ -8,14 +8,14 @@ import CalendarIcon from '@rsuite/icons/Calendar';
 import ThreeColumnsIcon from '@rsuite/icons/ThreeColumns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeather } from '@fortawesome/free-solid-svg-icons';
-import { ISidebarProps } from '@/app/shared/models/sidebarProps';
 import SunIcon from './SunIcon';
-import CloseIcon from '@rsuite/icons/Close';
 import MoonIcon from './MoonIcon';
+import { useGlobalContextProvider } from '@/app/contextAPI';
 
-const SidebarComp = (props: ISidebarProps) => {
+const SidebarComp = () => {
     const [expanded, setExpanded] = useState(true);
     const [activeKey, setActiveKey] = useState('1');
+    const { isDark, setIsDark } = useGlobalContextProvider();
 
     return (
         <div className='poppins w-64 flex flex-col'>
@@ -53,8 +53,8 @@ const SidebarComp = (props: ISidebarProps) => {
                     <div className='flex flex-col items-center py-4'>
                         <Toggle
                             size= {expanded ? "lg" : "sm"}
-                            onChange={props.setDarkMode}
-                            checked={props.darkMode}
+                            onChange={setIsDark}
+                            checked={isDark}
                             checkedChildren={<MoonIcon />}
                             unCheckedChildren={<SunIcon />}
                         />
