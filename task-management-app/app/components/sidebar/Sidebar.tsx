@@ -18,8 +18,7 @@ const SidebarComp = () => {
     const { isDark, setIsDark } = useGlobalContextProvider();
 
     return (
-        <div className='poppins w-64 flex flex-col'>
-            <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']} className='flex flex-col gap-4 justify-between h-full'>
+            <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']} className='flex flex-col gap-4 justify-between h-screen max-w-64 poppins shadow-lg z-30'>
                 {/* Logo */}
                 {expanded && 
                 <Sidenav.Header className='flex gap-2 items-center p-4'>
@@ -62,7 +61,6 @@ const SidebarComp = () => {
                     <Sidenav.Toggle onToggle={expanded => setExpanded(expanded)} />
                 </Sidenav.Body>
             </Sidenav>
-        </div>
     )
 }
 

@@ -5,6 +5,7 @@ import * as faSun from '@fortawesome/free-solid-svg-icons/faSun'
 
 const SunIcon = () => {
   return (
+    // @ts-ignore
     <Icon as={FaSvgIcon} faIcon={faSun}/>
   )
 }

@@ -5,6 +5,7 @@ import FaSvgIcon from '../FaSvgIcon'
 
 const MoonIcon = () => {
     return (
+        // @ts-ignore
         <Icon as={FaSvgIcon} faIcon={faMoon}/>
     )
 }

@@ -10,7 +10,7 @@ const SearchBar = () => {
     }, [])
 
     return (
-        <InputGroup style={{width: "30rem"}}>
+        <InputGroup style={{width: "35rem"}}>
             <InputGroup.Button>
                 <SearchIcon />
             </InputGroup.Button>

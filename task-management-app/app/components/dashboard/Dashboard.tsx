@@ -1,10 +1,13 @@
 import React from 'react'
-import TopBar from './TopBar'
+import MainArea from './main-area/MainArea'
+import TopBar from './top-bar/TopBar'
 
 const Dashboard = () => {
+
   return (
     <div className='poppins w-full'>
         <TopBar />
+        <MainArea />
     </div>
   )
 }
